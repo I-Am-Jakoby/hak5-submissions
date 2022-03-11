@@ -1,2 +1,2 @@
 # hak5-submissions
-This is a collection of my pentesting scripts I have come up with
+This is a collection of my scripts I am submitting to Hak5 to be featured
