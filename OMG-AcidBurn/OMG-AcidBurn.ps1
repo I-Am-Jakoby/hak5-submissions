@@ -27,6 +27,7 @@
 	It determines the last day they changed thier password and how many days ago.
 	Once the information is gathered the script will pause until a mouse movement is detected
 	Then the script uses Sapi speak to roast their set up and lack of security
+	If wifi networks and passwords are detected wallpaper will be changed to image displaying that information
 #>
 ############################################################################################################################################################
 
