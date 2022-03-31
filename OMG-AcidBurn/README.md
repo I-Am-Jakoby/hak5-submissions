@@ -83,9 +83,10 @@ I am Jakoby
     <img src="https://img.shields.io/badge/YouTube-I_am_Jakoby-red">
   </a>
 
+  Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 </p>
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
