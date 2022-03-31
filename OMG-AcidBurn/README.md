@@ -9,7 +9,7 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#Contributing">Contributing</a></li>
-    <li><a href="#Version">Version</a></li>
+    <li><a href="#Version-History">Version History</a></li>
     <li><a href="#Contact">Contact</a></li>
     <li><a href="#Acknowledgments">Acknowledgments</a></li>
   </ol>
