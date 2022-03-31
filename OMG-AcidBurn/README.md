@@ -1,6 +1,9 @@
+
+![Logo](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-AcidBurn/logo-170-px.png?raw=true)
+
 # OMG Acid Burn
 
-Simple overview of use/purpose.
+A script I put together to torment Call Center Scammers but can be used on your friends as well.. or Foes.
 
 ## Description
 
