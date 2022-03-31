@@ -2,6 +2,10 @@
 ![Logo](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-AcidBurn/logo-170-px.png?raw=true)
 </div>
 
+<div align="center">
+    <img src="https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-AcidBurn/logo-170-px.png" alt="Logo" width="80" height="80">
+</div>
+
 # OMG Acid Burn
 
 A script I put together to torment Call Center Scammers but can be used on your friends as well.. or Foes.
