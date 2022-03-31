@@ -1,10 +1,5 @@
-<div align="center">
-![Logo](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-AcidBurn/logo-170-px.png?raw=true)
-</div>
 
-<div align="center">
-    <img src="https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-AcidBurn/logo-170-px.png" alt="Logo" width="80" height="80">
-</div>
+![Logo](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-AcidBurn/logo-170-px.png?raw=true)
 
 # OMG Acid Burn
 
