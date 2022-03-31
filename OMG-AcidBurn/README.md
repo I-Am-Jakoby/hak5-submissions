@@ -32,12 +32,7 @@ Image generated will be saved to desktop, steganography is used to put hidden me
 ### Dependencies
 
 * DropBox 
-* ex. Windows 10
-
-### Installing
-
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+* Windows 10,11
 
 ### Executing program
 
