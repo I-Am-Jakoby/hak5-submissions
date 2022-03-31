@@ -8,10 +8,10 @@
     <li><a href="#getting-started">Getting Started</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#Contributing">Contributing</a></li>
+    <li><a href="#Version">Version</a></li>
+    <li><a href="#Contact">Contact</a></li>
+    <li><a href="#Acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -56,7 +56,7 @@ Any advise for common problems or issues.
 command to run if program contains helper info
 ```
 
-## Authors
+## Contributing
 
 All contributors names will be listed here
 
