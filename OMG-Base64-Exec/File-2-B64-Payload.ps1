@@ -19,7 +19,7 @@
 
 <#
 .SYNOPSIS
-	This is a powershell cmdlet that will convert a script to Base64 then format it into ducky script 
+  This is a powershell cmdlet that will convert a script to Base64 then format it into ducky script 
 
 .DESCRIPTION 
   This is a cmdlet that takes a file path and converts the contents of that file to a Base64 string 
