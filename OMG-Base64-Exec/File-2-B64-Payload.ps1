@@ -22,7 +22,7 @@
 	This is a powershell cmdlet that will convert a script to Base64 then format it into ducky script 
 
 .DESCRIPTION 
-	This is a cmdlet that takes a file path and converts the contents of that file to a Base64 string 
+  This is a cmdlet that takes a file path and converts the contents of that file to a Base64 string 
   That Base64 string is then formatted into ducky script ready to be used with the OMG devices
   The output of that conversion will be saved to the desktop by default 
   Use the "-output" tag to change where the payload is saved to
