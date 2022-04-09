@@ -25,7 +25,8 @@
   This is a cmdlet that takes a file path and converts the contents of that file to a Base64 string 
   That Base64 string is then formatted into ducky script ready to be used with the OMG devices
   The output of that conversion will be saved to the desktop by default 
-  Use the "-output" tag to change where the payload is saved to
+  Use the "-output" tag to change the directory where the payload is saved to
+  Use the "-File" tag to change the name of the file 
   Estimated time to execute is provided
   
 
@@ -37,11 +38,15 @@
   (Mandatory = $False)
   Provide the exact path to where the output file will be saved 
   
+.PARAMETER FileName
+  (Mandatory = $False)
+  Provide the name of the file   
+  
 .EXAMPLE
-  B64 -source "C:\Users\USER\Desktop\script.ps1" -output "C:\Users\micha\Desktop\payload.txt"
-  B64 -so "C:\Users\USER\Desktop\script.ps1" -out "C:\Users\micha\Desktop\payload.txt"
-  B64 -so "C:\Users\USER\Desktop\script.ps1" 
-  "C:\Users\USER\Desktop\script.ps1" | B64
+  B64 -source "C:\Users\USER\Desktop\script.ps1" -output "C:\Users\micha\Desktop" -File example.txt
+  B64 -so "C:\Users\USER\Desktop\script.ps1" -out "C:\Users\micha\Desktop" -File example.txt
+  B64 -so "C:\Users\USER\Desktop\script.ps1" -File example.txt
+  "C:\Users\USER\Desktop\script.ps1" | B64 -File example.txt
   
 #>
 
@@ -55,21 +60,27 @@ function B64{
 
 	[Parameter (Mandatory = $False)]
 	[Alias("output")]
-	[string]$out 
+	[string]$Path, 
+
+	[Parameter (Mandatory = $False)]
+	[Alias("FileName")]
+	[string]$File 
 
 	)	
-	
-	$Path = [Environment]::GetFolderPath("Desktop")
-	$File = "\converted.txt"
 
-	if (!$out) { $out = ($Path+$File) }
-	
-	$FilePath = $out	
+	if (!$File) { $File = "converted.txt" }
 
-	$Content = Get-Content -Path $so	
-	$converted = [convert]::ToBase64String([System.Text.encoding]::Unicode.GetBytes($Content))
+	if (!$Path) { $Path = [Environment]::GetFolderPath("Desktop") }
+	
+	$FilePath = ($Path+"\"+$File+".txt")
+
+	$FilePath
+
+	$converted = [Convert]::ToBase64String([System.Text.Encoding]::Unicode.GetBytes((Get-Content -Path $so -Raw -Encoding UTF8)))
+
 	$numChar = $converted.length
-	$estTime = $numChar/120
+	$Time = $numChar/140 
+	$estTime = [math]::Round($Time,2)
 	$incriment = 275
 
 	$pre = "STRING powershell -enc "
@@ -89,12 +100,16 @@ function B64{
 	echo "" >> $FilePath
 	echo "GUI r" >> $FilePath
 	echo "DELAY 250" >> $FilePath
+	echo "powershell" >> $FilePath
+	echo "DELAY 250" >> $FilePath
+	echo "ENTER" >> $FilePath
+	echo "DELAY 250" >> $FilePath
+	echo $pre >> $FilePath
+	echo "DELAY 250" >> $FilePath
 
-	ForEach($line in $lSplit) 
-	{
-	  echo $string$line >> $FilePath
-	}
+	echo $string$converted >> $FilePath
 
 	echo "DELAY 250" >> $FilePath
 	echo "ENTER" >> $FilePath
 }
+
