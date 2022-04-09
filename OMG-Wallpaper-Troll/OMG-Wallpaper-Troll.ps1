@@ -55,7 +55,7 @@ $ImageName = "dont-be-suspicious"
 
     # Write Error is just for troubleshooting 
     catch {Write-Error "No name was detected" 
-    return $null
+    return $env:UserName
     -ErrorAction SilentlyContinue
     }
 
