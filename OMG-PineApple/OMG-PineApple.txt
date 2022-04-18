@@ -8,7 +8,7 @@ DELAY 1000
 
 REM If the wifi pineapple SSID is detected target PC will connect to it  
 
-REM IF_PRESENT SSID="PineApple"
+IF_PRESENT SSID="PineApple"
 
 GUI r 
 DELAY 500
