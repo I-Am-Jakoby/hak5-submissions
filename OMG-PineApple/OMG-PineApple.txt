@@ -1,4 +1,8 @@
-REM This payload is meant to use powershell to add the network profile of your wifi pineapple to the targets PC and connect to it
+
+REM Title: OMG-PineApple
+REM Description: This payload is meant to use powershell to add the network profile of your wifi pineapple to the targets PC and connect to it
+REM Author: I am Jakoby
+REM Target: Windows 10, 11
 
 DELAY 1000
 
