@@ -13,9 +13,9 @@
   </ol>
 </details>
 
-# OMG Acid Burn
+# OMG PS-Draw
 
-A script I put together to torment Call Center Scammers but can be used on your friends as well.. or Foes.
+A script used to generate and draw images in the Powershell Window, used to leave a signature or perhaps taunt victims
 
 ## Description
 
