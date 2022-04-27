@@ -48,27 +48,27 @@ powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https:// < Your Shared link fo
 * The image will be generated in the powershell window
 
 This is an example of an image I used with the PS-Draw command 
-![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-PS-Draw/omg-ico.png)
+![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-PS-Draw/Images/omg-ico.png)
 
 This is how the iamge is interpreted and drawn out  
-![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-PS-Draw/PS-Draw.jpg)
+![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-PS-Draw/Images/PS-Draw.jpg)
 
 * The PS-Custom-Draw operates a little differently 
 * One of the preconfigured arrays is piped into the command to generate an image 
  
 * "$col | PS-Draw"  - This first one will show the available colors to be used as seen below
  
-![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-PS-Draw/ps-colors.jpg)
+![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-PS-Draw/Images/ps-colors.jpg)
 
 
 * "$omg | PS-Draw"  - This will draw out the OMG logo as seen below
  
-![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-PS-Draw/ps-omg.jpg)
+![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-PS-Draw/Images/ps-omg.jpg)
 
 
 * "$hak5 | PS-Draw" - This will draw out the Hak5 logo as seen below
  
-![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-PS-Draw/ps-hak5.jpg)
+![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-PS-Draw/Images/ps-hak5.jpg)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
