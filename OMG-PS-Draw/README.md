@@ -59,8 +59,10 @@ This is how the iamge is interpreted and drawn out
 * "$col | PS-Draw"  - This first one will show the available colors to be used as seen below
 ![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-PS-Draw/ps-colors.jpg)
 
+
 * "$omg | PS-Draw"  - This will draw out the OMG logo as seen below
 ![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-PS-Draw/ps-omg.jpg)
+
 
 * "$hak5 | PS-Draw" - This will draw out the Hak5 logo as seen below
 ![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-PS-Draw/ps-hak5.jpg)
