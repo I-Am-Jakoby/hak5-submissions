@@ -25,7 +25,7 @@
 .DESCRIPTION 
 	This program is used to locate your stolen cable. Or perhaps locate your "stolen" cable if you left it as bait. 
 	This script will get the Name and email associated with the targets microsoft account
-	Their geo-location will also be grabbed giving you the latitude and longitude of where the OMG device was activated
+	Their geo-location will also be grabbed giving you the latitude and longitude of where your device was activated
 #>
 
 #------------------------------------------------------------------------------------------------------------------------------------
