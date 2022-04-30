@@ -15,11 +15,11 @@
 
 # RD-PineApple
 
-A script used to connect a targets PC to your wifi PineApple
+A script used to connect a targets PC to your wifi PineApple using the Rubber Ducky
 
 ## Description
 
-This program will use the RubberDucky to connect target pc to your Wifi PineApples wireless access point
+This program will use the Rubber Ducky to connect target pc to your Wifi PineApples wireless access point
 It will generate an XML file that will be used to create a network profile for your Wifi PineApple. 
 Depending on your method of execution the XML file will either be manually entered into a powershell window 
 or you may use and Invoke Web-Request to download a script to add the network profile. After either the history of
