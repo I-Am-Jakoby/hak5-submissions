@@ -1,6 +1,6 @@
 # Download Image
 
-iwr https://www.dropbox.com/s/760he4yj18p9jj8/jumpscare.png?dl=1 -O $env:TMP\i.png
+iwr https://github.com/I-Am-Jakoby/hak5-submissions/raw/main/OMG/Payloads/OMG-JumpScare/jumpscare.png?dl=1 -O $env:TMP\i.png
 
 # Download WAV file
 
