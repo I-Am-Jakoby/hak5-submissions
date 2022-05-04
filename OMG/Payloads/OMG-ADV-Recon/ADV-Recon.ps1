@@ -361,7 +361,7 @@ vault -ErrorAction SilentlyContinue -Force
 
 # Upload output file to dropbox
 
-$DropBoxAccessToken = "MVZmWwGHXsYAAAAAAAAAAR_gizgMqtKj6hhNAiRAFM8nMI6-WbYvvyfTiOOavaiw"
+$DropBoxAccessToken = ""
 $TargetFilePath="/$FileName"
 $SourceFilePath="$env:TMP\$FileName"
 $arg = '{ "path": "' + $TargetFilePath + '", "mode": "add", "autorename": true, "mute": false }'
