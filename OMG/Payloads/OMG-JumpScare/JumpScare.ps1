@@ -4,7 +4,9 @@ iwr https://www.dropbox.com/s/760he4yj18p9jj8/jumpscare.png?dl=1 -O $env:TMP\i.p
 
 # Download WAV file
 
-iwr https://www.dropbox.com/s/ka34d0w94dla6s0/female_scream.wav?dl=1 -O $env:TMP\s.wav
+iwr https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG/Payloads/OMG-JumpScare/female_scream.wav?raw=true?dl=1 -O $env:TMP\s.wav
+
+
 
 #----------------------------------------------------------------------------------------------------
 
