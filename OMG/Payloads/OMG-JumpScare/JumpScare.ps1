@@ -201,3 +201,17 @@ Remove-Item (Get-PSreadlineOption).HistorySavePath
 # Deletes contents of recycle bin
 
 Clear-RecycleBin -Force -ErrorAction SilentlyContinue
+
+#----------------------------------------------------------------------------------------------------
+
+# This script repeadedly presses the capslock button, this snippet will make sure capslock is turned back off 
+
+Add-Type -AssemblyName System.Windows.Forms
+$caps = [System.Windows.Forms.Control]::IsKeyLocked('CapsLock')
+
+#If true, toggle CapsLock key, to ensure that the script doesn't fail
+if ($caps -eq $true){
+
+$key = New-Object -ComObject WScript.Shell
+$key.SendKeys('{CapsLock}')
+}
