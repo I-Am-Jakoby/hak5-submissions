@@ -23,6 +23,7 @@
 .DESCRIPTION 
 	This script will download a scary image and a scream sound effect hosted with this payload and host volume will be raised to max level
 	Upon running this script it will immediately pause after the downloads until a mouse movement is detected 
+	The capslock button will be pressed every 3 seconds to prevent sleep, and act as an indicator the payload is ready 
 	After a mouse movement is detected their wallpaper will change to the scary image provided and the scream sound effect will play
 #>
 
