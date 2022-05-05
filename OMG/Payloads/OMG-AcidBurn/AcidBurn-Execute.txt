@@ -1,3 +1,10 @@
+REM Title: AcidBurn
+
+REM Author: I am Jakoby
+
+REM Description: This payload is meant to torment your target to the fullest extent. Mission to recon then roast. See Acidburn.ps1 for more details
+
+REM Target: Windows 10, 11
 
 GUI r
 DELAY 500
