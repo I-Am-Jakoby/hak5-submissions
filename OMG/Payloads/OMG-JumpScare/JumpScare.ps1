@@ -1,10 +1,18 @@
-# Download Image
+# Download Image; replace link to $image to add your own image
+
+$image =  "https://github.com/I-Am-Jakoby/hak5-submissions/raw/main/OMG/Payloads/OMG-JumpScare/jumpscare.png"
+
+$i = -join($image,"?dl=1")
+iwr $i -O $env:TMP\i.png
 
 iwr https://github.com/I-Am-Jakoby/hak5-submissions/raw/main/OMG/Payloads/OMG-JumpScare/jumpscare.png?dl=1 -O $env:TMP\i.png
 
-# Download WAV file
+# Download WAV file; replace link to $wav to add your own sound
 
-iwr https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG/Payloads/OMG-JumpScare/female_scream.wav?raw=true?dl=1 -O $env:TMP\s.wav
+$wav = "https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG/Payloads/OMG-JumpScare/female_scream.wav?raw=true"
+
+$w = -join($wav,"?dl=1")
+iwr $w -O $env:TMP\s.wav
 
 
 
@@ -13,7 +21,7 @@ iwr https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG/Payloads/OMG-J
 <#
 
 .NOTES 
-	This will take the image you generated and set it as the targets wall paper
+	This will take the image you downloaded and set it as the targets wall paper
 #>
 
 Function Set-WallPaper {
