@@ -1,5 +1,11 @@
-REM this script will download and execute your locator script if your wifi access point is not detected
-REM this script needs to be saved in the boot directory to have it run as soon as your device is plugged in
+REM Title: ET-Phone-Home
+
+REM Author: I am Jakoby
+
+REM Target: Windows 10, 11
+
+REM Description: this script will download and execute your locator script if your wifi access point is not detected
+    REM this script needs to be saved in the boot directory to have it run as soon as your device is plugged in
 
 REM Replace SSID with name of wifi your computer is connected to
 
