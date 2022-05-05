@@ -6,7 +6,7 @@ REM Description: This payload is meant to taunt your target with a revealing wal
 
 REM Target: Windows 10, 11
 
-REM Remeber to replace the link with your DropBox shared link for the intended file to download
+REM Remeber to replace the link with your DropBox shared link for the intended file to download if you are using a custom variant of this payload
 REM Also remember to replace ?dl=0 with ?dl=1 at the end of your link so it is executed properly
 
 GUI r
