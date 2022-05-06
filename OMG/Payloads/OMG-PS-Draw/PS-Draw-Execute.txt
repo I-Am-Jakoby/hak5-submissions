@@ -6,7 +6,7 @@ REM     Description: This payload is meant to draw images in your targets powers
 
 REM     Target: Windows 10, 11
 
-REM     Remember to replace the link with your DropBox shared link for the intended file to download
+REM     Remember to replace the link with your link for the intended file to download
 REM     Also remember to replace ?dl=0 with ?dl=1 at the end of your link so it is executed properly
 
 REM     Download one of the two PS-Draw Execute files provided and execute it  
