@@ -13,7 +13,7 @@
   </ol>
 </details>
 
-# OMG Acid Burn
+# Acid Burn
 
 A script I put together to torment Call Center Scammers but can be used on your friends as well.. or Foes.
 
