@@ -13,7 +13,7 @@
   </ol>
 </details>
 
-# OMG ET Phone Home
+# ET Phone Home
 
 A script I put together to locate your stolen devices, or your "stolen" baited devices
 
