@@ -23,6 +23,7 @@ This script is set to run with 2 different methods.
 Either you use straight keystroke injection with no dependencies 
 Or you use an Invoke-WebRequest to download and execute a powershell script that will do the same thing 
 (With the powershell script you have the ability to modify it and add other actions)
+Either way your target will be directed to your youtube page where they will be made to subscribe to you
 
 ## Getting Started
 
@@ -30,6 +31,7 @@ Or you use an Invoke-WebRequest to download and execute a powershell script that
 
 * DropBox or other file hosting service - Your Shared link for the intended file
 * Windows 10,11
+* Your target will have to be signed into their youtube account
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
