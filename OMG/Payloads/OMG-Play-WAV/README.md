@@ -49,8 +49,6 @@ All contributors names will be listed here
 
 I am Jakoby
 
-Arf
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Version History
