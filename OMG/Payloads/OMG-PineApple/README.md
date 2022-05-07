@@ -35,7 +35,7 @@ the powershell window and run box will be erased for a clean exit.
 
 ### Executing program
 
-* Plug in your Cable
+* Plug in your device
 * Either the entire script will be manually entered into the powershell window or
 * Invoke-WebRequest will be entered in the Run Box to download and execute the script from memory
 * PS1 file to download is provided above
