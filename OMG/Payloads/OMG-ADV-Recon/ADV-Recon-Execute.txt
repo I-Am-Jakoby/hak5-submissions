@@ -2,7 +2,7 @@ REM     Title: ADV-Recon
 
 REM     Author: I am Jakoby
 
-REM     Description: This payload is meant to do an advanced recon of the targets PC. See ADV-Recon.ps1 file for more details.
+REM     Description: This payload is meant to do an advanced recon of the targets PC. See README.md file for more details.
 
 REM     Target: Windows 10, 11
 
