@@ -61,7 +61,7 @@ $originalPOS = [System.Windows.Forms.Cursor]::Position.X
 ############################################################################################################################################################
 
 # Play Sound 
-$PlayWav=New-Object System.Media.SoundPlayer;$PlayWav.SoundLocation="$env:TMP\f.wav";$PlayWav.playsync()
+$PlayWav=New-Object System.Media.SoundPlayer;$PlayWav.SoundLocation="$env:TMP\e.wav";$PlayWav.playsync()
 
 ############################################################################################################################################################
 
