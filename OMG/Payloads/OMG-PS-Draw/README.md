@@ -13,7 +13,7 @@
   </ol>
 </details>
 
-# OMG PS-Draw
+# PS-Draw
 
 A script used to generate and draw images in the Powershell Window, used to leave a signature or perhaps taunt victims
 
@@ -41,7 +41,7 @@ The script will then be paused until a mouse movement is detected at which time 
 
 ### Executing program
 
-* Plug in OMG Device
+* Plug in your Device
 * Invoke-WebRequest will be used to download the image 
 
 ```
