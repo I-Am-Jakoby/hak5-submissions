@@ -82,7 +82,7 @@ I am Jakoby
     <img src="https://img.shields.io/badge/YouTube-I_am_Jakoby-red">
   </a>
 
-  Project Link: [https://github.com/I-Am-Jakoby/hak5-submissions/tree/main/OMG-AcidBurn](https://github.com/I-Am-Jakoby/hak5-submissions/tree/main/OMG-AcidBurn)
+  Project Link: [https://github.com/I-Am-Jakoby/hak5-submissions/tree/main/OMG/Payloads/OMG-Play-WAV)
 </p>
 
 
