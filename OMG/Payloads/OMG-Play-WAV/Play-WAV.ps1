@@ -33,7 +33,7 @@
 ############################################################################################################################################################
 
 # Download Sound (When using your own link "dl=0" needs to be changed to "dl=1")
-iwr https:// <Your DropBox shared link intended for file> ?dl=1 -O $env:TMP\f.wav
+iwr https:// <Your DropBox shared link intended for file> ?dl=1 -O $env:TMP\e.wav
 
 ############################################################################################################################################################
 
