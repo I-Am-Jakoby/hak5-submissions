@@ -56,24 +56,24 @@ This is an example of an image I used with the PS-Draw command
 ![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG/Payloads/OMG-PS-Draw/Images/omg-ico.png?raw=true)
 
 This is how the iamge is interpreted and drawn out  
-![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-PS-Draw/Images/PS-Draw.jpg)
+![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG/Payloads/OMG-PS-Draw/Images/PS-Draw.jpg?raw=true)
 
 * The PS-Custom-Draw operates a little differently 
 * One of the preconfigured arrays is piped into the command to generate an image 
  
 * "$col | PS-Draw"  - This first one will show the available colors to be used as seen below
  
-![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-PS-Draw/Images/ps-colors.jpg)
+![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG/Payloads/OMG-PS-Draw/Images/ps-colors.jpg?raw=true)
 
 
 * "$omg | PS-Draw"  - This will draw out the OMG logo as seen below
  
-![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-PS-Draw/Images/ps-omg.jpg)
+![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG/Payloads/OMG-PS-Draw/Images/ps-omg.jpg?raw=true)
 
 
 * "$hak5 | PS-Draw" - This will draw out the Hak5 logo as seen below
  
-![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-PS-Draw/Images/ps-hak5.jpg)
+![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG/Payloads/OMG-PS-Draw/Images/ps-hak5.jpg?raw=true)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
