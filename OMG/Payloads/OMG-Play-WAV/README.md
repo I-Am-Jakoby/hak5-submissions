@@ -36,7 +36,7 @@ After one is the WAV file will be played
 ### Executing program
 
 * Plug in your device
-* Invoke-WebRequest will be entered in the Run Box to download and execute the script from memory
+* Invoke-WebRequest will be entered in the Run Box to download your WAV file
 ```
 powershell -w h -NoP -NonI -Exec Bypass iwr https:// < Your Shared link for the intended file> ?dl=1 -O $env:TMP\e.wav
 ```
