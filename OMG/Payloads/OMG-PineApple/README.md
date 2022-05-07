@@ -19,8 +19,7 @@ A script used to connect a targets PC to your wifi PineApple
 
 ## Description
 
-This program will use the OMG Cables geofencing capabilities to try and detect the Wifi PineApples wireless access point
-It will generate an XML file that will be used to create a network profile for your Wifi PineApple. 
+This program will generate an XML file that will be used to create a network profile for your Wifi PineApple. 
 Depending on your method of execution the XML file will either be manually entered into a powershell window 
 or you may use and Invoke Web-Request to download a script to add the network profile. After either the history of
 the powershell window and run box will be erased for a clean exit. 
