@@ -30,7 +30,7 @@ Along with TREE list of all files in the target computer is gathered and uploade
 
 ### Dependencies
 
-* DropBox - Your Shared link for the intended file
+* DropBox or other file sharing service - Your Shared link for the intended file
 * Windows 10,11
 
 <p align="right">(<a href="#top">back to top</a>)</p>
