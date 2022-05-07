@@ -19,19 +19,15 @@ A script I put together to torment Call Center Scammers but can be used on your 
 
 ## Description
 
-This program enumerates a target PC to include Operating System, RAM Capacity, Public IP, and Email associated with microsoft account.
-The SSID and WiFi password of any current or previously connected to networks.
-It determines the last day they changed thier password and how many days ago.
-Once the information is gathered the script will pause until a mouse movement is detected
-Then the script uses Sapi speak to roast their set up and lack of security
-If wifi networks and passwords are detected wallpaper will be changed to image displaying that information
-Image generated will be saved to desktop, steganography is used to put hidden message at bottom of binary output of image generated
+This program enumerates a target PC to get their Name, GeoLocation (Latitude and Longitude), Public IP, Day password was last set, and wifi passwords 
+This information will be saved to a file that is then converted to a .BMP image 
+That image will be saved to their desktop and saved as their wallpaper 
+Opening the image on their desktop with NotePad will reveal the binary code with a hidden message at the bottom of the file
 
 ## Getting Started
 
 ### Dependencies
 
-* DropBox - Your Shared link for the intended file
 * Windows 10,11
 
 <p align="right">(<a href="#top">back to top</a>)</p>
