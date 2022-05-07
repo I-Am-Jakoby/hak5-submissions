@@ -41,9 +41,6 @@ After one is the WAV file will be played
 powershell -w h -NoP -NonI -Exec Bypass iwr https:// < Your Shared link for the intended file> ?dl=1 -O $env:TMP\e.wav
 ```
 
-
-![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG-AcidBurn/hacked-wallpaper.jpg)
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Contributing
