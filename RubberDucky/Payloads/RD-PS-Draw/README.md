@@ -117,7 +117,7 @@ I am Jakoby
     <img src="https://img.shields.io/badge/YouTube-I_am_Jakoby-red">
   </a>
 
-  Project Link: [https://github.com/I-Am-Jakoby/hak5-submissions/tree/main/OMG-PS-Draw)
+  Project Link: [https://github.com/I-Am-Jakoby/hak5-submissions/tree/main/RubberDucky/Payloads/RD-PS-Draw)
 </p>
 
 
