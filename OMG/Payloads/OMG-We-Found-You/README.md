@@ -24,11 +24,14 @@ Then a page will open in their browser with a map of their current location on i
 Their system volume will be turned to max level 
 And sapi speak with talk through their speakers the message provided or a custom one you provide 
 
+![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG/Payloads/OMG-We-Found-You/location.jpg)
+
 ## Getting Started
 
 ### Dependencies
 
 * Windows 10,11
+* Their location services are turned on
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
