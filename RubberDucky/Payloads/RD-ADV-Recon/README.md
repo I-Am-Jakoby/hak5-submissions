@@ -84,7 +84,7 @@ I am Jakoby
     <img src="https://img.shields.io/badge/YouTube-I_am_Jakoby-red">
   </a>
 
-  Project Link: [https://github.com/I-Am-Jakoby/hak5-submissions/tree/main/OMG/Payloads/OMG-ADV-Recon)
+  Project Link: [https://github.com/I-Am-Jakoby/hak5-submissions/tree/main/RubberDucky/Payloads/RD-ADV-Recon)
 </p>
 
 
