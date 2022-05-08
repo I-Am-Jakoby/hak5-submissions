@@ -31,6 +31,7 @@ And sapi speak with talk through their speakers the message provided or a custom
 ### Dependencies
 
 * Windows 10,11
+* Their location services are turned on
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
