@@ -6,6 +6,10 @@
 # Attackmodes:   HID, Storage
 # Target:        Windows 10, 11
 
+#     --------------------------------------------------------------------------------------
+#     THIS PAYLOAD IS PLUG AND PLAY. NO MODIFICATIONS NEEDED SIMPLY RUN THE CODE DOWN BELOW.
+#     --------------------------------------------------------------------------------------
+
 LED SETUP
 
 GET SWITCH_POSITION
