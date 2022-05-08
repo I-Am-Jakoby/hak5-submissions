@@ -24,6 +24,8 @@ This information will be saved to a file that is then converted to a .BMP image
 That image will be saved to their desktop and saved as their wallpaper 
 Opening the image on their desktop with NotePad will reveal the binary code with a hidden message at the bottom of the file
 
+![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG/Payloads/OMG-Wallpaper-Troll/wp-troll.jpg)
+
 ## Getting Started
 
 ### Dependencies
