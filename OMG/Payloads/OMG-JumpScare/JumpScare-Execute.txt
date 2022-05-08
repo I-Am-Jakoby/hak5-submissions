@@ -6,6 +6,10 @@ REM     Description: This payload is meant to torment your target to the fullest
 
 REM     Target: Windows 10, 11
 
+REM     --------------------------------------------------------------------------------------
+REM     THIS PAYLOAD IS PLUG AND PLAY. NO MODIFICATIONS NEEDED SIMPLY RUN THE CODE DOWN BELOW.
+REM     --------------------------------------------------------------------------------------
+
 REM     Start by minimizing all their current windows
 GUI m
 DELAY 500
