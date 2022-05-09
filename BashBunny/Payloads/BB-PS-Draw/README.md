@@ -34,7 +34,6 @@ The script will then be paused until a mouse movement is detected at which time 
 
 ### Dependencies
 
-* DropBox or another image hosting service - Your Shared link for the intended file
 * Windows 10,11
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -42,11 +41,7 @@ The script will then be paused until a mouse movement is detected at which time 
 ### Executing program
 
 * Plug in your Device
-* Invoke-WebRequest will be used to download the image 
-
-```
-powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https:// < Your Shared link for the intended file> ?dl=1
-```
+* A one liner command in the run box will execute the script on the bash bunny
 * The image will be converted into a BMP file
 * An algorithm will be used to find the closest matching colors available in the powershell window
 * The image will be generated in the powershell window
