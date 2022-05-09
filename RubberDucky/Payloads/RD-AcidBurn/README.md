@@ -37,7 +37,7 @@ Image generated will be saved to desktop, steganography is used to put hidden me
 
 ### Executing program
 
-* Plug in OMG Cable
+* Plug in your Bash Bunny
 * Invoke-WebRequest will be entered in the Run Box to download and execute the script from memory
 * Enumerate and get Full Name, Amount of RAM, Public IP, Wifi Password Length, Wifi Networks and Passwords, Day Password was last changed, Email
 * Custom responses have been programmed to roast the target based on the information gathered during enumeration phase 
