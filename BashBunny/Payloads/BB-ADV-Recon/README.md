@@ -24,7 +24,7 @@ The GeoLocation (latitude and longitude) of where the script was ran.
 The SSID and WiFi password of any current or previously connected to networks.
 It determines the last day they changed thier password and how many days ago.
 Intel on the system Info, HDDs, network interfaces, TCP connections, Processes, Services, Installed software, drivers, and video card 
-Along with TREE list of all files in the target computer is gathered and uploaded to your DropBox cloud storage
+Along with TREE list of all files in the target computer is gathered and uploaded to your BashBunny
 
 ## Getting Started
 
