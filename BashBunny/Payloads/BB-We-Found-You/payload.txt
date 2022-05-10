@@ -2,7 +2,7 @@
 # Description:   This payload is meant to open a map in your targets web browser with their current location
 # Author:        I am Jakoby
 # Version:       1.0
-# Category:      Prank/Recon
+# Category:      Prank
 # Attackmodes:   HID, Storage
 # Target:        Windows 10, 11
 
