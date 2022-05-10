@@ -2,7 +2,7 @@
 # Description:   This payload is meant to do an advanced recon of the targets PC. See README.md file for more details.
 # Author:        I am Jakoby
 # Version:       1.0
-# Category:      Exfiltration
+# Category:      Recon
 # Attackmodes:   HID, Storage
 # Target:        Windows 10, 11
 
