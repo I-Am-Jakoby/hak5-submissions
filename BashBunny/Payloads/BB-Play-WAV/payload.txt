@@ -2,7 +2,7 @@
 # Description:   This payload will download a WAV file, pause until a mouse movement is detected then play the sound effect
 # Author:        I am Jakoby
 # Version:       1.0
-# Category:      Executio
+# Category:      Execution
 # Attackmodes:   HID, Storage
 # Target:        Windows 10, 11
 
