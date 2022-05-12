@@ -24,6 +24,10 @@ This will be followed by a fake authentication ui prompt.
 If the target tried to "X" out, hit "CANCEL" or while the password box is empty hit "OK" the prompt will continuously re pop up 
 Once the target enters their credentials their information will be uploaded to your dropbox for collection 
 
+![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG/Payloads/OMG-Credz-Plz/unusual-sign-in.jpg)
+
+![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG/Payloads/OMG-Credz-Plz/sign-in.jpg)
+
 ## Getting Started
 
 ### Dependencies
