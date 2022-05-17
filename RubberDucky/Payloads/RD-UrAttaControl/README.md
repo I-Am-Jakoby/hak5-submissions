@@ -29,6 +29,10 @@ script saved in the $Payload variable
 
 This payload completely bypasses the UAC and will run any admin level script without a prompt
 
+You can use this function I wrote to convert your .ps1 sscripts to Base64
+
+https://github.com/I-Am-Jakoby/PowerShell-for-Hackers/blob/main/Functions/B64.md
+
 ## Getting Started
 
 ### Dependencies
@@ -84,7 +88,7 @@ I am Jakoby
     <img src="https://img.shields.io/badge/YouTube-I_am_Jakoby-red">
   </a>
 
-  Project Link: [https://github.com/I-Am-Jakoby/hak5-submissions/tree/main/OMG/Payloads/OMG-UrAttaControl)
+  Project Link: [https://github.com/I-Am-Jakoby/hak5-submissions/tree/main/RubberDucky/Payloads/RD-UrAttaControl)
 </p>
 
 
