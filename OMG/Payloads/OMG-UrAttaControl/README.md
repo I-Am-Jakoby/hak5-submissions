@@ -20,9 +20,14 @@ A script used to open an elevated powershell console and execute admin level com
 ## Description
 
 Completely ran from the execute file. Replace the URL in that file with yours leading to a base64 script
+
 This script will use IEX to download a base64 script to the $Payload variable
+
 Using a keystroke injections attack a heavily obfuscated and encoded snippet will download and execute any base64 
+
 script saved in the $Payload variable
+
+This payload completely bypasses the UAC and will run any admin level script without a prompt
 
 ## Getting Started
 
