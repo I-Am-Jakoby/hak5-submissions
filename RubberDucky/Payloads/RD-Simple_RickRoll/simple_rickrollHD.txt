@@ -5,5 +5,5 @@ DELAY 200
 STRING cmd
 ENTER
 DELAY 200
-STRING start https://www.youtube.com/watch?v=bxqLsrlakK8 & exit
+STRING start https://www.youtube.com/watch?v=m1yWUWhamj4 & exit
 ENTER
