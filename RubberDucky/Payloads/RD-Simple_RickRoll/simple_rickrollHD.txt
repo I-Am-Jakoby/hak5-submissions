@@ -1,0 +1,9 @@
+REM Simple Rick Roll
+REM Just opens the url with default browser
+GUI r
+DELAY 200
+STRING cmd
+ENTER
+DELAY 200
+STRING start https://www.youtube.com/watch?v=bxqLsrlakK8 & exit
+ENTER
