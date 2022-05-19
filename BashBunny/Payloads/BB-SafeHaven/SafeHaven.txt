@@ -1,3 +1,14 @@
+REM     Title: Safe-Haven
+
+REM     Author: I am Jakoby
+
+REM     Description: This is a UAC bypass payload that will open an elevated powershell console 
+REM     Next a Directory called "safe" will be generated in your Documents Directory
+REM     The "safe" directory will be added to the Window's Defender Exclusion list
+REM     The AntiVirus will ignore all files downloaded to or ran from here
+
+REM     Target: Windows 10, 11
+
 DELAY 500
 GUI r
 DELAY 500
