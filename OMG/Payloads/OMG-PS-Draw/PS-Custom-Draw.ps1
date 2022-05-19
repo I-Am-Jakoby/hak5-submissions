@@ -227,6 +227,6 @@ $originalPOS = [System.Windows.Forms.Cursor]::Position.X
 
 # Call function with one of the arrays listed above to generate an image
 
-$hak5 | PS-Draw
+$omg | PS-Draw
 
 
