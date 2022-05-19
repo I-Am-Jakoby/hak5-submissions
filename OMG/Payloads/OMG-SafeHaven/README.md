@@ -20,8 +20,11 @@ A script used to open an elevated powershell console and created a folder ignore
 ## Description
 
 This is a UAC bypass payload that will open an elevated powershell console 
+
 Next a Directory called "safe" will be generated in your Documents Directory
+
 The "safe" directory will be added to the Window's Defender Exclusion list
+
 The AntiVirus will ignore all files downloaded to or ran from here
 
 ## Getting Started
