@@ -396,7 +396,7 @@ try {
 
 # Delete powershell history
 
-	#Remove-Item (Get-PSreadlineOption).HistorySavePath
+	Remove-Item (Get-PSreadlineOption).HistorySavePath
 
 # Deletes contents of recycle bin
 
