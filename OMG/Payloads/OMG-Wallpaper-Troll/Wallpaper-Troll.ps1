@@ -103,8 +103,8 @@ function Get-GeoLocation{
 
 }
 
-$GL = Get-GeoLocation
-if ($GL) { echo "`nYour Location: `n$GL" >> $Env:temp\foo.txt }
+#$GL = Get-GeoLocation
+#if ($GL) { echo "`nYour Location: `n$GL" >> $Env:temp\foo.txt }
 
 
 #############################################################################################################################################
