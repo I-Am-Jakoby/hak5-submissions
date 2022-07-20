@@ -81,6 +81,8 @@ I am Jakoby
 
 * 0.1
     * Initial Release
+* 0.5
+    * Added additional recon capabilities
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
