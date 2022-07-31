@@ -19,12 +19,12 @@
                                                                                                                                                                                                                                                
 <#
 .SYNOPSIS
-	This is an advanced recon of a target PC and exfiltration of that data
+	This is payload used to inject powershell code into shortcuts
 
 .DESCRIPTION 
 	This payload will gather information on the shortcuts on your targets desktop 
-  That data will then be manipulated to embed a powershell script 
-  This script will be ran in the background when the short cut is 
+  	That data will then be manipulated to embed a powershell script 
+  	This script will be ran in the background when the short cut is 
 
 #>
 
