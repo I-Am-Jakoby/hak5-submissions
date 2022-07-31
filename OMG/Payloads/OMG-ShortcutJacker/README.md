@@ -29,6 +29,26 @@ A script used to embed malware in the shortcut on your targets desktop
 
 This payload will run a powershell script in the background of any shortcut used on the targets desktop
 
+This is done by taking advantage of the ```Target``` field where powershell commands can be stored or run. 
+
+This field can store a max of 259 characters so if your command exceeds that consider using an IWR function to download and execute a longer script. 
+
+I have an Invoke WebRequest tutorial for that [HERE](https://www.youtube.com/watch?v=bPkBzyEnr-w&list=PL3NRVyAumvmppdfMFMUzMug9Cn_MtF6ub&index=13)
+
+<img src="https://github.com/I-Am-Jakoby/hak5-submissions/raw/main/Assets/Shortcut-Jacker/properties.jpg" width="300">
+
+Inside the .ps1 file you will find a line at the beginning with a ```$code``` variable. This is where the powershell code you want executed is stored.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<img src="https://github.com/I-Am-Jakoby/hak5-submissions/raw/main/Assets/Shortcut-Jacker/code.jpg" width="900">
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Using the ```Get-Shortcut``` function we will get the following information we can then use to maintain the integrity of the appearance of the shortcut after manipulating the ```Target``` field.
+
+<img src="https://github.com/I-Am-Jakoby/hak5-submissions/raw/main/Assets/Shortcut-Jacker/shortcut.jpg" width="900">
+
 ## Getting Started
 
 ### Dependencies
