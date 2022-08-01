@@ -33,7 +33,7 @@
 <#
 .NOTES
 	The powershell code stored in this variable is what will run in the background
-  Take note you are limited to roughly 200 characters, for anything longer consider using an IWR to download and execute a longer script
+	Take note you are limited to roughly 200 characters, for anything longer consider using an IWR to download and execute a longer script
 #>  
 
 $code = "Add-Type -AssemblyName PresentationCore,PresentationFramework; [System.Windows.MessageBox]::Show('Hacked')"
