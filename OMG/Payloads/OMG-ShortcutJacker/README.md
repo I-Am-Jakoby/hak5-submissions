@@ -37,7 +37,9 @@ This payload will run a powershell script in the background of any shortcut used
 
 This is done by taking advantage of the ```Target``` field where powershell commands can be stored or run. 
 
-This field can store a max of 259 characters so if your command exceeds that consider using an IWR function to download and execute a longer script. 
+This field can store a max of 259 VISIBLE characters in that bar however after some testing I found you can store 924 characters int the ```$code``` variable and it will still run. 
+
+So if your command exceeds that consider using an IWR function to download and execute a longer script. 
 
 I have an Invoke WebRequest tutorial for that [HERE](https://www.youtube.com/watch?v=bPkBzyEnr-w&list=PL3NRVyAumvmppdfMFMUzMug9Cn_MtF6ub&index=13)
 
