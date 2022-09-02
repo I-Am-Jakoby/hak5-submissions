@@ -33,7 +33,8 @@
 <#
 .NOTES
 	The powershell code stored in this variable is what will run in the background
-	Take note you are limited to roughly 200 characters, for anything longer consider using an IWR to download and execute a longer script
+	This field can store a max of 259 VISIBLE characters in that bar however after some testing I found you can store 924 characters int the $code 
+	variable and it will still run.
 #>  
 
 $code = "Add-Type -AssemblyName PresentationCore,PresentationFramework; [System.Windows.MessageBox]::Show('Hacked')"
