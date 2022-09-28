@@ -23,11 +23,6 @@
 
 # Shortcut Jacker
 
-<div align=left>
-<img align="center" src="https://github.com/I-Am-Jakoby/hak5-submissions/raw/main/Assets/Shortcut-Jacker/sjtn.png" width="300">
-  <p>YouTube Tutorial</p>
-</div>
-
 <p align="center">
       <a href="https://www.youtube.com/watch?v=sOLIdqpzrW4">
         <img src=https://github.com/I-Am-Jakoby/hak5-submissions/raw/main/Assets/Shortcut-Jacker/sjtn.png width="300" alt="Python" />
