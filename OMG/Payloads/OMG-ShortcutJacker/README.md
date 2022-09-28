@@ -23,7 +23,7 @@
 
 # Shortcut Jacker
 
-<p align="center">
+<p align="left">
       <a href="https://www.youtube.com/watch?v=sOLIdqpzrW4">
         <img src=https://github.com/I-Am-Jakoby/hak5-submissions/raw/main/Assets/Shortcut-Jacker/sjtn.png width="300" alt="Python" />
       </a>
