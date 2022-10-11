@@ -60,6 +60,8 @@ Using the ```Get-Shortcut``` function we will get the following information we c
 
 ## Getting Started
 
+Once the script is executed all of the shortcuts on your target's desktop will be infected with the powershell code you have stored in the `$code` variable in the .ps1 file
+
 ### Dependencies
 
 * An internet connection
