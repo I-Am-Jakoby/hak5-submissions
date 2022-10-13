@@ -28,6 +28,8 @@ A script used to do an advanced rick roll on your target
 ## Description
 
 This program rick rolls your target without opening a muted youtube video
+A rick roll video is downloaded and played in your powershell console 
+when a mouse movement is detected
 
 ## Getting Started
 
